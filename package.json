@@ -7,5 +7,8 @@
     "docs:build": "vitepress build"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+      "vitepress-sidebar": "^0.1.0"
+  }
 }

@@ -46,7 +46,7 @@ jobs:
       - name: Install dependencies
         run: npm ci # or pnpm install / yarn install / bun install
       - name: Install VitePress
-        run: npm i -g vitepress vitepress-sidebar
+        run: npm i -g vitepress
       - name: Build with VitePress
         run: npm run docs:build # or pnpm docs:build / yarn docs:build / bun run docs:build
       - name: Upload artifact
