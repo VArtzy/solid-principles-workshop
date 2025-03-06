@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-      "vitepress-sidebar": "^0.1.0"
+      "vitepress-sidebar": "^^1.31.0"
   }
 }
