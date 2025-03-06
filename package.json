@@ -1,0 +1,11 @@
+{
+  "name": "basic-solid",
+  "version": "1.0.0",
+  "description": "[Belajar Prinsip Pemrograman SOLID](https://www.dicoding.com/academies/169) from [Dicoding](https://www.dicoding.com/users/787116)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
