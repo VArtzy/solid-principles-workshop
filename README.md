@@ -1,10 +1,10 @@
 # Basic SOLID (Single Responsibility, Open-Closed, Liskov Substitution, Interface Segregation, and Dependencies Inversion)
 
-[Belajar Prinsip Pemrograman SOLID](https://www.dicoding.com/academies/169) from [Dicoding](https://www.dicoding.com/users/787116)
+Belajar dan Praktik Prinsip Pemrograman SOLID
 
 ## Glossary
 
-[Glossary](https://github.com/fadhilhaka/Basic-SOLID/tree/main/glossary)
+[Glossary](https://github.com/vartzy/solid-principles-workshop/tree/main/glossary)
 
 ## Reference
 
@@ -16,10 +16,10 @@
 
 | Course | Description |
 |--------|-------------|
-| [OOP](https://github.com/fadhilhaka/Basic-SOLID/tree/main/OOP) | Intro to OOP |
-| [Relasi OOP](https://github.com/fadhilhaka/Basic-SOLID/tree/main/relasi-OOP) | Types Of Relationships In OOP |
-| [Software Design Principle](https://github.com/fadhilhaka/Basic-SOLID/tree/main/software-design-principle) | Intro to Software Design Principle |
-| [SOLID](https://github.com/fadhilhaka/Basic-SOLID/tree/main/SOLID) | Intro to SOLID |
+| [OOP](https://github.com/vartzy/solid-principles-workshop/tree/main/OOP) | Intro to OOP |
+| [Relasi OOP](https://github.com/vartzy/solid-principles-workshop/tree/main/relasi-OOP) | Types Of Relationships In OOP |
+| [Software Design Principle](https://github.com/vartzy/solid-principles-workshop/tree/main/software-design-principle) | Intro to Software Design Principle |
+| [SOLID](https://github.com/fadhilhaka/vartzy/solid-principles-workshop/main/SOLID) | Intro to SOLID |
 
 ## Intention
 

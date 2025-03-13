@@ -1,31 +1,32 @@
 # Software Design Principle
 
-Dalam pengembangan sebuah perangkat lunak, architecture berada pada tingkat tertinggi atau yang dikenal dengan istilah high-level, di mana definisinya merupakan sebuah pola arsitektur yang menentukan bentuk dan struktur keseluruhan  perangkat lunak. 
+Dalam pengembangan perangkat lunak, **architecture** berada pada tingkat tertinggi (high-level) dan menentukan bentuk serta struktur keseluruhan perangkat lunak. Sementara itu, **desain** berada pada tingkat yang lebih rendah (low-level) dan berkaitan dengan interkoneksi antara modul serta entitas perangkat lunak seperti packages, components, dan classes.
 
-Sedangkan desain memiliki posisi di tingkat rendah atau istilahnya adalah low-level di bawah architecture. Desain juga memiliki definisi yaitu interkoneksi antara modul dan beberapa entitas perangkat lunak seperti packages, components, dan classes.
+**Software Design Principle** adalah seperangkat pedoman yang membantu menghindari desain yang buruk saat mengembangkan perangkat lunak. Menurut Robert C. Martin, ada tiga karakteristik utama dari desain yang buruk yang perlu dihindari:
 
-Software Design Principle merupakan sebuah pedoman yang dapat kita gunakan untuk menghindari design yang buruk saat mengembangkan sebuah perangkat lunak. 
+## 1. Rigidity (Kekakuan)
 
-Menurut Robert C. Martin, terdapat 3 (tiga) karakteristik penting dari design yang buruk yang perlu kita perhatikan dan sebaiknya dihindari.
+Rigidity mengacu pada kondisi di mana suatu sistem sulit diubah, bahkan untuk perubahan yang paling sederhana. Ketika kita mencoba melakukan perubahan, perubahan tersebut seringkali memicu kebutuhan untuk mengubah bagian-bagian lain dalam modul yang saling bergantung. Akibatnya, perubahan yang seharusnya bisa dilakukan dengan cepat justru memakan waktu lebih lama dan berpotensi memengaruhi modul-modul lain yang terkait.
 
-## Rigidity
+Contoh:  
+Jika kita mengubah satu bagian kode, perubahan tersebut memerlukan penyesuaian di beberapa bagian lain, sehingga prosesnya menjadi rumit dan rentan kesalahan.
 
-Dimulai dari rigidity atau kekakuan. Rigidity adalah kondisi suatu sistem yang sulit diubah, bahkan untuk perubahan yang paling sederhana [1](http://www.cvc.uab.es/shared/teach/a21291/temes/object_oriented_design/materials_adicionals/principles_and_patterns.pdf). 
+## 2. Fragility (Kerapuhan)
 
-Saat kita ingin melakukan perubahan, perubahan tersebut menyebabkan ketergantungan untuk mengubah item lain di dalam suatu modul. Alhasil, perubahan yang seharusnya dapat dilakukan dalam waktu yang singkat,  malah sebaliknya. Belum lagi dampaknya pada modul-modul lain yang saling berkaitan.
+Fragility berkaitan erat dengan rigidity. Fragility adalah kecenderungan perangkat lunak untuk mengalami kesalahan di beberapa bagian setiap kali dilakukan perubahan. Kesalahan ini sering terjadi di area yang tidak memiliki hubungan langsung dengan area yang diubah. Hal ini membuat perbaikan menjadi lebih sulit karena perubahan kecil dapat menyebabkan masalah yang tidak terduga di bagian lain.
 
-## Fragility
+Contoh:  
+Memperbaiki bug di satu modul justru menyebabkan bug baru di modul lain yang tidak terkait secara langsung.
 
-Selanjutnya adalah fragility. Fragility (kerapuhan) masih memiliki keterkaitan dengan rigidity. Fragility adalah kecenderungan perangkat lunak yang salah di beberapa bagian setiap kali melakukan perubahan [1](http://www.cvc.uab.es/shared/teach/a21291/temes/object_oriented_design/materials_adicionals/principles_and_patterns.pdf).
+## 3. Immobility (Ketidakmampuan untuk Daur Ulang)
 
-Seringkali kesalahan terjadi di area yang tidak memiliki hubungan konseptual dengan area yang diubah. Sehingga jika melakukan perbaikan, kadang takut timbul kesalahan dengan cara yang tidak terduga.
+Immobility adalah ketidakmampuan untuk menggunakan kembali kode atau modul dari proyek lain atau bahkan dari bagian proyek yang sama. Seringkali, modul yang ingin digunakan kembali memiliki terlalu banyak ketergantungan, sehingga memisahkannya menjadi tugas yang rumit dan berisiko. Akibatnya, engineer lebih memilih untuk menulis ulang kode daripada mencoba memisahkan dan menggunakan kembali modul yang sudah ada.
 
-Ketika fragility ada di dalam suatu perangkat lunak, kemungkinan kesalahan akan meningkat seiring berjalannya waktu. Perangkat lunak semacam itu tak hanya sulit dipelihara, bahkan sulit juga dipertahankan.
+Contoh:  
+Sebuah modul yang seharusnya bisa digunakan kembali di proyek lain ternyata memiliki terlalu banyak ketergantungan, sehingga engineer memilih untuk membuat modul baru daripada memisahkan modul tersebut.
 
-## Immobility
+---
 
-Terakhir yang harus kita perhatikan dan hindari adalah Imobilitas. Yaitu sebuah ketidakmampuan untuk menggunakan kembali perangkat lunak dari proyek lain atau bagian-bagian dari proyek yang sama [1](http://www.cvc.uab.es/shared/teach/a21291/temes/object_oriented_design/materials_adicionals/principles_and_patterns.pdf).
+### Kesimpulan
 
-Seorang engineer tentu akan mengalami kondisi di mana ia membutuhkan modul atau sistem yang sebelumnya sudah pernah ditulis atau dibuat oleh engineer lain. Namun, sering juga terjadi bahwa modul yang dibutuhkan tersebut memiliki terlalu banyak bobot yang bergantung padanya.
-
-Setelah mencoba untuk memisahkan, para engineer menemukan bahwa pekerjaan dan risiko yang diperlukan untuk memisahkan bagian yang diinginkan (dari bagian yang tidak diinginkan), terlalu besar untuk ditoleransi. Sehingga alih-alih menulis ulang (re-write), sang engineer akan menggunakannya kembali untuk project lain.
+Ketiga karakteristik ini—**rigidity**, **fragility**, dan **immobility**—merupakan tanda-tanda desain yang buruk. Untuk menghindarinya, penting untuk menerapkan prinsip-prinsip desain yang baik, seperti **SOLID principles**, yang membantu menciptakan sistem yang fleksibel, mudah dipelihara, dan dapat digunakan kembali. Dengan demikian, perangkat lunak yang dikembangkan akan lebih mudah diubah, diperbaiki, dan diadaptasi untuk kebutuhan baru.

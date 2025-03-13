@@ -2,21 +2,22 @@
 
 ![](https://d17ivq9b7rppb3.cloudfront.net/original/academy/20200423171403c7df7b777d495b81fe9cabaf74e759e2.png)
 
-OOP dan SOLID merupakan 2 (dua) hal yang berbeda. 
+OOP (Object-Oriented Programming) dan SOLID adalah dua konsep yang berbeda.
 
-OOP adalah sebuah paradigma untuk menuliskan program yang sudah diadaptasi oleh beberapa bahasa pemrograman, sedangkan SOLID merupakan kumpulan principle untuk membantu kita  mengembangkan sebuah perangkat lunak dengan tingkat kekukuhan yang tinggi.
+OOP adalah paradigma pemrograman yang digunakan oleh berbagai bahasa pemrograman, sedangkan SOLID adalah kumpulan prinsip yang membantu dalam mengembangkan perangkat lunak yang kuat dan mudah dikelola.
 
 ## Tujuan SOLID
 
-Menulis kode yang dapat dengan mudah diekstensi (extended) dan dipertahankan (maintained).
+Tujuan utama SOLID adalah menulis kode yang mudah diperluas (extended) dan dipertahankan (maintained).
 
-Prinsip SOLID bukanlah suatu hukum atau aturan tertentu yang wajib kita patuhi, melainkan sebuah prinsip yang dimaksudkan untuk membantu kita dalam menuliskan kode yang rapi.
+Prinsip SOLID bukanlah aturan yang wajib diikuti, melainkan panduan untuk menulis kode yang lebih terstruktur dan rapi.
 
-Berikut adalah tujuan dari prinsip SOLID dalam pembuatan struktur mid-level perangkat lunak:
 
-* Toleran terhadap perubahan [2](https://learning.oreilly.com/library/view/clean-architecture-a/9780134494272/).
-* Mudah dipahami [2](https://learning.oreilly.com/library/view/clean-architecture-a/9780134494272/).
-* Komponen dasar dapat digunakan kembali dalam bentuk software system lainnya [2](https://learning.oreilly.com/library/view/clean-architecture-a/9780134494272/).
+Berikut adalah tujuan dari prinsip SOLID dalam pengembangan perangkat lunak:
+
+* Mudah dipahami [2](https://learning.oreilly.com/library/view/clean-architecture-a/9780134494272/). Kode harus mudah dipahami oleh developer lain.
+* Toleran terhadap perubahan [2](https://learning.oreilly.com/library/view/clean-architecture-a/9780134494272/). Kode harus mudah diubah tanpa menimbulkan dampak besar pada sistem.
+* Dapat digunakan kembali (reuseable) [2](https://learning.oreilly.com/library/view/clean-architecture-a/9780134494272/). Komponen dasar harus dapat digunakan kembali dalam sistem perangkat lunak lainnya.
 
 Istilah mid-level yang merujuk pada prinsip SOLID ini diterapkan oleh engineer yang bekerja pada level module [2](https://learning.oreilly.com/library/view/clean-architecture-a/9780134494272/).
 
@@ -33,9 +34,9 @@ Setelah komponen tersebut dapat kita desain dengan baik menggunakan prinsip SOLI
 
 SRP digunakan untuk mengatur tanggung jawab dari sebuah entitas yang berada di dalam sebuah proyek dalam hal ini adalah sebuah module/class untuk memenuhi kebutuhan dari actor. Actor merupakan kumpulan "user" atau "stakeholder" yang menginginkan perubahan pada perangkat lunak kita [2](https://learning.oreilly.com/library/view/clean-architecture-a/9780134494272/).
 
-Tanggung jawab (responsibility) berarti bahwa jika suatu class punya 2 (dua) fungsionalitas yang tak miliki keterkaitan untuk melakukan suatu perubahan, maka kita harus membagi fungsionalitas yang berbeda tersebut dengan cara memisahkannya menjadi dua class yang berbeda. 
+SRP menyatakan bahwa sebuah modul atau class harus memiliki satu tanggung jawab saja. Tanggung jawab ini terkait dengan kebutuhan dari satu "actor" (pengguna atau stakeholder) yang memerlukan perubahan pada perangkat lunak.
 
-Setiap class yang sudah dipisahkan berdasarkan fungsionalitasnya hanya akan menangani satu tanggung jawab. Sehinga, jika kita melakukan perubahan tanggung jawab, kita cukup fokus pada masing-masing class yang sudah dipisahkan tersebut.
+Jika sebuah class memiliki dua fungsionalitas yang tidak terkait, sebaiknya dipisahkan menjadi dua class yang berbeda. Dengan demikian, setiap class hanya menangani satu tanggung jawab, sehingga perubahan pada satu tanggung jawab tidak memengaruhi class lainnya.
 
 Untuk mengetahui seperti apa penerapan Single Responsibility Principle (SRP), kita akan membuat sebuah contoh kasus tentang layanan product makanan dengan skenario berikut:
 
@@ -780,3 +781,7 @@ class MongoDatabase : Database {
 ~~~
 
 Dependency Inversion Principle merupakan prinsip ke-5 dan terakhir dari S.O.L.I.D. Dalam prinsip ini dikenalkan abstraksi sebagai antarmuka antara komponen yang memilik hierarki tinggi (higher-level) dan komponen yang memiliki hierarki rendah (lower-level) untuk menghilangkan ketergantungan antara kedua hierarki tersebut.
+
+### Kesimpulan
+
+Prinsip SOLID membantu dalam menciptakan perangkat lunak yang mudah dikelola, diperluas, dan dipahami. Dengan menerapkan prinsip ini, kita dapat menghindari masalah seperti rigidity, fragility, dan immobility, serta meningkatkan kualitas kode secara keseluruhan.
